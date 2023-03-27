@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="include/css/style.css">
+	<title> Pokésekai | </title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico"/>
+</head>
+<body>
+	<header>
+		<nav id="nav">
+			<ul>
+				<li class="logoo"><a href="index.html"><img src="img/logo.png" alt="logo" id="logo" >&ensp;</a></li>
+				<li class="deroulant left" id="menu"><a href="#"> Types&ensp;</a>
+					<ul class="sous" id="liste-types"></ul>
+				</li>
+				<li class="deroulant" id="menu"><a href="#"> Évolutions&ensp;</a>
+					<ul class="sous" id="liste-evolutions"></ul>
+				</li>
+				<li class="deroulant" id="menu"><a href="#"> Poids&ensp;</a>
+					<ul class="sous" id="liste-poids"></ul>
+				</li>
+				<li class="deroulant" id="menu"><a href="#"> Tailles&ensp;</a>
+					<ul class="sous" id="liste-tailles"></ul>
+				</li>
+				<li class="deroulant" id="menu"><a href="#"> Liens&ensp;</a>
+					<ul class="sous" id="liens">
+						<li> <a href="https://www.pokemon.com/fr/pokedex/" target="_blank">Pokémon officiel&ensp;</a> </li>
+						<li> <a href="https://www.univ-amu.fr/" target="_blank">Univ AMU&ensp;</a> </li>
+						<li> <a href="https://ident.univ-amu.fr/cas/login?service=https%3A%2F%2Fent.univ-amu.fr%2Fent-amu-backend%2Fent%2Flogin%3Fthen%3D%252Ftableau-bord" target="_blank">ENT AMU&ensp;</a> </li>
+					</ul>
+				</li>
+				<li class="contact" id="menu"> <a href="#contact">Nous Contacter&ensp;</a> </li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="titre">
+		<h1></h1>
+		<br>
+		<h2></h2>
+	</div>
+	<ul id="liste-pokemon"></ul>
+
+	<footer>
+		<h1 id="contact"> Nous contacter</h1>
+		<form method="get" autocomplete="on" action="index.html?">
+			<a href="#nav"><img src="img/fleche_noire.png" alt="fleche noire" class="fleche"></a>
+			<table>
+				<tr>
+					<td>
+						<input type="text" id="nom_form" name="nom_form" Row="3" placeholder="Nom" class="formulaire">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="email" name="email_form" id="email_form" placeholder="Email" class="formulaire">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea type="txt" name="comentaire_form" id="comentaire_form" cols="25" rows="3"
+						placeholder="Commentaire"></textarea>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value='' id="valider">
+			<input type="reset" value='' id="recommencer">
+		</form>
+	</footer>
+	
+	<script src="include/js/data.js" defer></script>
+	<script src="include/js/type.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+/* partie nav*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+  width: 100%;
+  margin: 0;
+  background-color: #cc2a2a;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+#menu {
+  margin-top: 5.45%;
+}
+
+#logo {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 60%;
+}
+
+ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  width: 14.2%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 15px 0px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #CCC;
+  background-color: #f86f6f;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+nav>ul li:hover .sous {
+  display: block;
+}
+
+.sous li {
+  width: 100%;
+  text-align: center;
+}
+
+.sous li.types {
+  display: block;
+  width: 50%;
+}
+
+.sous a:hover {
+  border-bottom: none;
+}
+
+.deroulant>a::after {
+  content: " ▼";
+  font-size: 12px;
+}
+
+/* bordure de la barre de navigation */
+.left {
+  border-left: solid black;
+}
+
+.deroulant{
+  border-top: solid black;
+}
+
+.logoo{
+  border-bottom: solid black;
+}
+
+.contact {
+  border-top: solid black;
+}
+
+/*_____________________________________________________________________________________*/
+
+/* Footer et formulaire*/
+footer {
+  margin: 10px;
+  border: solid black;
+  border-radius: 30px;
+  background-color: rgb(107, 107, 107);
+  margin: 10px;
+  padding: 20px;
+}
+
+.formulaire {
+  width: 500px;
+  height: 50px;
+  margin: 1px;
+  border-radius: 40px;
+  font-size: 1.5em;
+  text-indent: 10px;
+  border: solid black;
+}
+
+textarea {
+  width: 500px;
+  height: 110px;
+  margin: 0;
+  border-radius: 12px;
+  resize: none;
+  font-size: 1.5em;
+  text-indent: 10px;
+  border: solid black;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7%;
+}
+
+#contact {
+  background-color: white;
+  border-radius: 30px;
+  border: solid black;
+  margin-bottom: 20px;
+}
+
+.fleche {
+  width: 105px;
+  height: 105px;
+  border-radius: 100%;
+  float: left;
+  margin-top: px;
+  margin-right: 50px;
+}
+
+#valider {
+  height: 80px;
+  width: 80px;
+  background: url(../../img/checkmark.png) top right no-repeat;
+  background-size: contain;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+  border: 0;
+  float: right;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+#recommencer {
+  height: 60px;
+  width: 60px;
+  background: url(../../img/cancel.png) top right no-repeat;
+  background-size: contain;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  float: right;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.resaux{
+  align-items:center;
+  display: flex;
+}
+
+/*_______________________________________________________________________________________*/
+/* Partie générale du site */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #cc2a2a;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#liste-pokemon {
+  /*Ici c'est la boite, là où il y a tout les pokemon, on modifie l'entièreté mais pas la cas par cas*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  border: solid black;
+}
+
+.Pokemon {
+  /*Ici c'est le fond, ça applique une règle pour chaque Pokémon*/
+  border-radius: 15px;
+  box-shadow: 5px 8px 6px 6px rgb(0, 0, 0);
+  padding: 40px;
+  margin: 15px;
+  margin-bottom: 25px;
+  background-color: #cc2a2a;
+  text-align: center;
+}
+
+.nom {
+  /* Le nom de chaque pokemon */
+  text-decoration: none;
+  font-size: 30px;
+  position: absolute;
+  font-weight: bolder;
+  margin-left: 8px;
+  color: white;
+}
+
+.imgp {
+  /* Le fond de l'image de chaque pokemon */
+  background-color: #f86f6f;
+  border-radius: 10px;
+}
+
+.Pokemon:hover {
+  /* Donne un effet quand on passe la souris sur le pokemon */
+  opacity: 0.5;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.titre {
+  margin: 50px;
+  background-color: white;
+  border-radius: 30px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  border: solid black;
+}
+
+/*_______________________________________________________________________________________*/
+/* Page pokemon */
+#image{
+  border: solid black;
+  padding: 0px;
+  flex: none;
+  border-radius: 30px;
+}
+
+#infos {
+  background-color: #f86f6f;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #000000;
+  font-size: 20px;
+  padding: 15px;
+  margin: 10px;
+}
+
+#description {
+  background-color: #f86f6f;
+  border: solid black;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#evolutions {
+  background-color: #f86f6f;
+  padding: 15px;
+  margin: 10px;
+  border: solid black;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+}
+
+.evo {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.evol {
+  /*Ici c'est le fond des pokemon, ça applique une règle pour chaque Pokémon des evolutions*/
+  border-radius: 15px;
+  box-shadow: 2px 5px 3px 3px rgb(0, 0, 0);
+  padding: 10px;
+  margin: 15px;
+  margin-bottom: 25px;
+  background-color: #7e7e7e;
+  text-align: center;
+}
+
+#imgpe {
+  background-color: #b9b9b9;
+  border-radius: 10px;
+}
+
+#imgpokev {
+  /* Change le fond du pokemon actuel dans les évolutions */
+  border-radius: 10px;
+  background-color: #cc2a2a;
+}
+
+.img_fleche {
+  margin-top: 35px;
+}
